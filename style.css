@@ -15,82 +15,81 @@ body {
     margin: 0;
 }
 
-
 .container {
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  width: 400px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 400px;
 }
 
 .title {
-  margin: 0;
+    margin: 0;
 }
 
 .subtitle {
-  display: inline-block;
-  margin: 5px 0 20px;
-  opacity: 0.8;
+    display: inline-block;
+    margin: 5px 0 20px;
+    opacity: 0.8;
 }
 
 .header {
-  background-color: #3e57db;
-  color: #fff;
-  padding: 30px 20px;
+    background-color: indigo;
+    color: ivory;
+    padding: 30px 20px;
 }
 
 .header input {
-  background-color: #fff;
-  border: 0;
-  border-radius: 50px;
-  color: rgb(37, 37, 37);
-  font-size: 14px;
-  padding: 10px 15px;
-  width: 100%;
+    background-color: #fff;
+    border: 0;
+    border-radius: 50px;
+    color: #000;
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
 }
 
 .header input:focus {
-  outline: none;
+    outline: none;
 }
 
 .user-list {
-  background-color: #fff;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  max-height: 400px;
-  overflow-y: auto;
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .user-list li {
-  display: flex;
-  padding: 20px;
+    display: flex;
+    padding: 20px;
 }
 
 .user-list img {
-  border-radius: 50%;
-  object-fit: cover;
-  height: 50px;
-  width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
 }
 
 .user-list .user-info {
-  margin-left: 10px;
+    margin-left:  10px;
 }
 
 .user-list .user-info h4 {
-  margin: 0 0 10px;
+    margin: 0 0 10px;
 }
 
 .user-list .user-info p {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .user-list li:not(:last-of-type) {
-  border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 /* used in js */
 .user-list li.hide {
-  display: none;
+    display: none;
 }
