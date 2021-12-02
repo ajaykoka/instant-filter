@@ -1,19 +1,34 @@
 // Js 
-
 const result = document.getElementById('result')
 const filter = document.getElementById('filter')
 const listItems = [] // initialise
 
-getData() //upon
+getData() //upon open
+
 
 filter.addEventListener('input', (e) => filterData(e.target.value))
 
 async function getData() {
-    const res = await fetch('http://randomuser.me/api?results=50')
+    const res = await fetch('https://randomuser.me/api?results=50')
 
     const {results} = await res.json()
 
-    result.innerHTML = '' //clear
+    result.innerHTML = '' // clear
+
+// const result = document.getElementById('result')
+// const filter = document.getElementById('filter')
+// const listItems = [] // initialise
+
+// getData() //upon
+
+// filter.addEventListener('input', (e) => filterData(e.target.value))
+
+// async function getData() {
+//     const res = await fetch('http://randomuser.me/api?results=50')
+
+//     const {results} = await res.json()
+
+//     result.innerHTML = '' //clear
 
     results.forEach(user => {
         const li = document.createElement('li')
@@ -21,9 +36,9 @@ async function getData() {
         listItems.push(li)
 
         li.innerHTML = `
-        <img src="${user.picture.medium}" alt="" >
+        <img src="${user.picture.medium}" alt="${user.name.first}" >
         <div class="user-info">
-            <h4>${user.name.first}</h4>
+            <h4>${user.name.first} ${user.name.last}</h4>
             <p>${user.location.city}, ${user.location.country}</p>
         </div>
         `
@@ -41,3 +56,4 @@ function filterData(searchTerm) {
         }
     })
 }
+
